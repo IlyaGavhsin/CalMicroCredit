@@ -34,15 +34,15 @@ namespace CalMicroCredit
             this.txPeriod = new System.Windows.Forms.TextBox();
             this.lbPeriod = new System.Windows.Forms.Label();
             this.dataDays = new System.Windows.Forms.ListBox();
+            this.btnRachet = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sumZayma
             // 
             this.sumZayma.Location = new System.Drawing.Point(63, 108);
             this.sumZayma.Name = "sumZayma";
-            this.sumZayma.Size = new System.Drawing.Size(123, 20);
+            this.sumZayma.Size = new System.Drawing.Size(132, 20);
             this.sumZayma.TabIndex = 0;
-            this.sumZayma.TextChanged += new System.EventHandler(this.sumZayma_TextChanged);
             // 
             // sumZaymlb
             // 
@@ -52,15 +52,13 @@ namespace CalMicroCredit
             this.sumZaymlb.Size = new System.Drawing.Size(123, 13);
             this.sumZaymlb.TabIndex = 1;
             this.sumZaymlb.Text = "Сумма Займа в рублях";
-            this.sumZaymlb.Click += new System.EventHandler(this.sumZaymlb_Click);
             // 
             // txPeriod
             // 
             this.txPeriod.Location = new System.Drawing.Point(63, 162);
             this.txPeriod.Name = "txPeriod";
-            this.txPeriod.Size = new System.Drawing.Size(110, 20);
+            this.txPeriod.Size = new System.Drawing.Size(132, 20);
             this.txPeriod.TabIndex = 2;
-            this.txPeriod.TextChanged += new System.EventHandler(this.txPeriod_TextChanged);
             // 
             // lbPeriod
             // 
@@ -75,17 +73,28 @@ namespace CalMicroCredit
             // 
             this.dataDays.FormattingEnabled = true;
             this.dataDays.Items.AddRange(new object[] {
-            "Дни"});
+            "Дни    Проценты"});
             this.dataDays.Location = new System.Drawing.Point(63, 217);
             this.dataDays.Name = "dataDays";
-            this.dataDays.Size = new System.Drawing.Size(120, 95);
+            this.dataDays.Size = new System.Drawing.Size(132, 147);
             this.dataDays.TabIndex = 6;
+            // 
+            // btnRachet
+            // 
+            this.btnRachet.Location = new System.Drawing.Point(218, 307);
+            this.btnRachet.Name = "btnRachet";
+            this.btnRachet.Size = new System.Drawing.Size(160, 57);
+            this.btnRachet.TabIndex = 7;
+            this.btnRachet.Text = "Расчитать";
+            this.btnRachet.UseVisualStyleBackColor = true;
+            this.btnRachet.Click += new System.EventHandler(this.btnRachet_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRachet);
             this.Controls.Add(this.dataDays);
             this.Controls.Add(this.lbPeriod);
             this.Controls.Add(this.txPeriod);
@@ -106,6 +115,7 @@ namespace CalMicroCredit
         private System.Windows.Forms.TextBox txPeriod;
         private System.Windows.Forms.Label lbPeriod;
         private System.Windows.Forms.ListBox dataDays;
+        private System.Windows.Forms.Button btnRachet;
     }
 }
 

@@ -22,18 +22,29 @@ namespace CalMicroCredit
 
         }
 
-        private void sumZayma_TextChanged(object sender, EventArgs e)
+        private void btnRachet_Click(object sender, EventArgs e)
         {
 
-        }
+            int zaym = Int32.Parse(sumZayma.Text);
+            if (zaym > 500000 || zaym < 0)
+            {
+                MessageBox.Show("Сумма займа введена неверно");
+                return;
+            }
 
-        private void sumZaymlb_Click(object sender, EventArgs e)
-        {
+            int period = Int32.Parse(txPeriod.Text);
+            if (period > 365 || period < 1)
+            {
+                MessageBox.Show("Период введ неверно");
+                return;
+            }
 
-        }
 
-        private void txPeriod_TextChanged(object sender, EventArgs e)
-        {
+            for (int i = 0; i <= Convert.ToInt32(txPeriod.Text); i++)
+            {
+                dataDays.Items.Add(10);
+            }
+
 
         }
     }
