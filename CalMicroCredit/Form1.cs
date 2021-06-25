@@ -12,6 +12,9 @@ namespace CalMicroCredit
 {
     public partial class Form1 : Form
     {
+        public int obchaySumVyp = 0;
+        public int sumProc = 0;
+        public int effStavka = 0;
         public Form1()
         {
             InitializeComponent();
@@ -39,13 +42,12 @@ namespace CalMicroCredit
                 return;
             }
 
+            var data = txProc.Text.Split(' ');
 
-            for (int i = 0; i <= Convert.ToInt32(txPeriod.Text); i++)
+            for(int i = 0; i <= period; i++)
             {
-                dataDays.Items.Add(10);
+                sumProc += Convert.ToInt32(data[i]) * zaym;
             }
-
-
         }
     }
 }

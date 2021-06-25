@@ -33,8 +33,11 @@ namespace CalMicroCredit
             this.sumZaymlb = new System.Windows.Forms.Label();
             this.txPeriod = new System.Windows.Forms.TextBox();
             this.lbPeriod = new System.Windows.Forms.Label();
-            this.dataDays = new System.Windows.Forms.ListBox();
             this.btnRachet = new System.Windows.Forms.Button();
+            this.txProc = new System.Windows.Forms.TextBox();
+            this.laSrockData = new System.Windows.Forms.Label();
+            this.lbsumObVyp = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // sumZayma
@@ -69,19 +72,9 @@ namespace CalMicroCredit
             this.lbPeriod.TabIndex = 3;
             this.lbPeriod.Text = "Срок Займа в днях";
             // 
-            // dataDays
-            // 
-            this.dataDays.FormattingEnabled = true;
-            this.dataDays.Items.AddRange(new object[] {
-            "Дни    Проценты"});
-            this.dataDays.Location = new System.Drawing.Point(63, 217);
-            this.dataDays.Name = "dataDays";
-            this.dataDays.Size = new System.Drawing.Size(132, 147);
-            this.dataDays.TabIndex = 6;
-            // 
             // btnRachet
             // 
-            this.btnRachet.Location = new System.Drawing.Point(218, 307);
+            this.btnRachet.Location = new System.Drawing.Point(241, 307);
             this.btnRachet.Name = "btnRachet";
             this.btnRachet.Size = new System.Drawing.Size(160, 57);
             this.btnRachet.TabIndex = 7;
@@ -89,13 +82,49 @@ namespace CalMicroCredit
             this.btnRachet.UseVisualStyleBackColor = true;
             this.btnRachet.Click += new System.EventHandler(this.btnRachet_Click);
             // 
+            // txProc
+            // 
+            this.txProc.Location = new System.Drawing.Point(63, 226);
+            this.txProc.Multiline = true;
+            this.txProc.Name = "txProc";
+            this.txProc.Size = new System.Drawing.Size(132, 138);
+            this.txProc.TabIndex = 8;
+            // 
+            // laSrockData
+            // 
+            this.laSrockData.AutoSize = true;
+            this.laSrockData.Location = new System.Drawing.Point(63, 206);
+            this.laSrockData.Name = "laSrockData";
+            this.laSrockData.Size = new System.Drawing.Size(135, 13);
+            this.laSrockData.TabIndex = 9;
+            this.laSrockData.Text = "Процент на каждый день";
+            // 
+            // lbsumObVyp
+            // 
+            this.lbsumObVyp.AutoSize = true;
+            this.lbsumObVyp.Location = new System.Drawing.Point(462, 89);
+            this.lbsumObVyp.Name = "lbsumObVyp";
+            this.lbsumObVyp.Size = new System.Drawing.Size(128, 13);
+            this.lbsumObVyp.TabIndex = 11;
+            this.lbsumObVyp.Text = "Общая Сумма Выплаты";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(462, 108);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(132, 20);
+            this.textBox1.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbsumObVyp);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.laSrockData);
+            this.Controls.Add(this.txProc);
             this.Controls.Add(this.btnRachet);
-            this.Controls.Add(this.dataDays);
             this.Controls.Add(this.lbPeriod);
             this.Controls.Add(this.txPeriod);
             this.Controls.Add(this.sumZaymlb);
@@ -114,8 +143,11 @@ namespace CalMicroCredit
         private System.Windows.Forms.Label sumZaymlb;
         private System.Windows.Forms.TextBox txPeriod;
         private System.Windows.Forms.Label lbPeriod;
-        private System.Windows.Forms.ListBox dataDays;
         private System.Windows.Forms.Button btnRachet;
+        private System.Windows.Forms.TextBox txProc;
+        private System.Windows.Forms.Label laSrockData;
+        private System.Windows.Forms.Label lbsumObVyp;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
