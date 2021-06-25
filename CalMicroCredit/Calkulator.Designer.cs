@@ -160,6 +160,7 @@ namespace CalMicroCredit
             this.btnSave.TabIndex = 16;
             this.btnSave.Text = "Сохранить";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Calkulator
             // 
