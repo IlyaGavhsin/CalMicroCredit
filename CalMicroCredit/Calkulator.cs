@@ -34,14 +34,14 @@ namespace CalMicroCredit
                 if (zaym > 500000 || zaym < 0)
                 {
                     MessageBox.Show("Сумма займа введена неверно");
-                    return;
+                    throw new ArgumentNullException();
                 }
 
                 
                 if (period > 365 || period < 1)
                 {
-                    MessageBox.Show("Период введ неверно");
-                    return;
+                    MessageBox.Show("Период введен неверно");
+                    throw new ArgumentNullException();
                 }
 
                 var data = txProc.Text.Split(' ');
@@ -65,18 +65,7 @@ namespace CalMicroCredit
             catch
             {
                 MessageBox.Show("Подставтье корекктные значения");
-                throw new ArgumentNullException();
             }
-
-
-
-
-
-
-
-
-
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -85,6 +74,20 @@ namespace CalMicroCredit
 
             try
             {
+                double zaym = Convert.ToDouble(sumZayma.Text);
+                double period = Convert.ToDouble(txPeriod.Text);
+                if (zaym > 500000 || zaym < 0)
+                {
+                    MessageBox.Show("Сумма займа введена неверно");
+                    throw new ArgumentNullException();
+                }
+
+
+                if (period > 365 || period < 1)
+                {
+                    MessageBox.Show("Период введ неверно");
+                    throw new ArgumentNullException();
+                }
                 // write new file
                 using (StreamWriter sw = new StreamWriter(path, false, System.Text.Encoding.Default))
                 {
@@ -96,7 +99,6 @@ namespace CalMicroCredit
             catch
             {
                 MessageBox.Show("Подставтье корекктные значения");
-                throw new ArgumentNullException();
             }
             
 

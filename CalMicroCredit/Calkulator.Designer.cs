@@ -79,7 +79,7 @@ namespace CalMicroCredit
             // 
             // btnRachet
             // 
-            this.btnRachet.Location = new System.Drawing.Point(296, 244);
+            this.btnRachet.Location = new System.Drawing.Point(219, 228);
             this.btnRachet.Name = "btnRachet";
             this.btnRachet.Size = new System.Drawing.Size(160, 57);
             this.btnRachet.TabIndex = 7;
@@ -154,7 +154,7 @@ namespace CalMicroCredit
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(296, 318);
+            this.btnSave.Location = new System.Drawing.Point(219, 302);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(160, 57);
             this.btnSave.TabIndex = 16;
