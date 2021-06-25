@@ -1,7 +1,7 @@
 ﻿
 namespace CalMicroCredit
 {
-    partial class Form1
+    partial class Calkulator
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -37,7 +37,12 @@ namespace CalMicroCredit
             this.txProc = new System.Windows.Forms.TextBox();
             this.laSrockData = new System.Windows.Forms.Label();
             this.lbsumObVyp = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbSumVyp = new System.Windows.Forms.TextBox();
+            this.lbSumProc = new System.Windows.Forms.Label();
+            this.tbSumProc = new System.Windows.Forms.TextBox();
+            this.lbStav = new System.Windows.Forms.Label();
+            this.tbEfStav = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sumZayma
@@ -74,7 +79,7 @@ namespace CalMicroCredit
             // 
             // btnRachet
             // 
-            this.btnRachet.Location = new System.Drawing.Point(241, 307);
+            this.btnRachet.Location = new System.Drawing.Point(296, 244);
             this.btnRachet.Name = "btnRachet";
             this.btnRachet.Size = new System.Drawing.Size(160, 57);
             this.btnRachet.TabIndex = 7;
@@ -108,20 +113,66 @@ namespace CalMicroCredit
             this.lbsumObVyp.TabIndex = 11;
             this.lbsumObVyp.Text = "Общая Сумма Выплаты";
             // 
-            // textBox1
+            // tbSumVyp
             // 
-            this.textBox1.Location = new System.Drawing.Point(462, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 20);
-            this.textBox1.TabIndex = 10;
+            this.tbSumVyp.Location = new System.Drawing.Point(462, 108);
+            this.tbSumVyp.Name = "tbSumVyp";
+            this.tbSumVyp.Size = new System.Drawing.Size(132, 20);
+            this.tbSumVyp.TabIndex = 10;
             // 
-            // Form1
+            // lbSumProc
+            // 
+            this.lbSumProc.AutoSize = true;
+            this.lbSumProc.Location = new System.Drawing.Point(458, 165);
+            this.lbSumProc.Name = "lbSumProc";
+            this.lbSumProc.Size = new System.Drawing.Size(99, 13);
+            this.lbSumProc.TabIndex = 13;
+            this.lbSumProc.Text = "Сумма Процентов";
+            // 
+            // tbSumProc
+            // 
+            this.tbSumProc.Location = new System.Drawing.Point(461, 181);
+            this.tbSumProc.Name = "tbSumProc";
+            this.tbSumProc.Size = new System.Drawing.Size(132, 20);
+            this.tbSumProc.TabIndex = 12;
+            // 
+            // lbStav
+            // 
+            this.lbStav.AutoSize = true;
+            this.lbStav.Location = new System.Drawing.Point(459, 228);
+            this.lbStav.Name = "lbStav";
+            this.lbStav.Size = new System.Drawing.Size(118, 13);
+            this.lbStav.TabIndex = 15;
+            this.lbStav.Text = "Эффективная ставка ";
+            // 
+            // tbEfStav
+            // 
+            this.tbEfStav.Location = new System.Drawing.Point(462, 244);
+            this.tbEfStav.Name = "tbEfStav";
+            this.tbEfStav.Size = new System.Drawing.Size(141, 20);
+            this.tbEfStav.TabIndex = 14;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(296, 318);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(160, 57);
+            this.btnSave.TabIndex = 16;
+            this.btnSave.Text = "Сохранить";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // Calkulator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 578);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.lbStav);
+            this.Controls.Add(this.tbEfStav);
+            this.Controls.Add(this.lbSumProc);
+            this.Controls.Add(this.tbSumProc);
             this.Controls.Add(this.lbsumObVyp);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbSumVyp);
             this.Controls.Add(this.laSrockData);
             this.Controls.Add(this.txProc);
             this.Controls.Add(this.btnRachet);
@@ -129,8 +180,8 @@ namespace CalMicroCredit
             this.Controls.Add(this.txPeriod);
             this.Controls.Add(this.sumZaymlb);
             this.Controls.Add(this.sumZayma);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Calkulator";
+            this.Text = "Calkulator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -147,7 +198,12 @@ namespace CalMicroCredit
         private System.Windows.Forms.TextBox txProc;
         private System.Windows.Forms.Label laSrockData;
         private System.Windows.Forms.Label lbsumObVyp;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbSumVyp;
+        private System.Windows.Forms.Label lbSumProc;
+        private System.Windows.Forms.TextBox tbSumProc;
+        private System.Windows.Forms.Label lbStav;
+        private System.Windows.Forms.TextBox tbEfStav;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 

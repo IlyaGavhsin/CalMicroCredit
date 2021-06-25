@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace CalMicroCredit
 {
-    public partial class Form1 : Form
+    public partial class Calkulator : Form
     {
-        public int obchaySumVyp = 0;
-        public int sumProc = 0;
-        public int effStavka = 0;
-        public Form1()
+        public double obchaySumVyp = 0;
+        public double sumProc = 0;
+        public double effStavka = 0;
+        public Calkulator()
         {
             InitializeComponent();
         }
@@ -28,14 +28,14 @@ namespace CalMicroCredit
         private void btnRachet_Click(object sender, EventArgs e)
         {
 
-            int zaym = Int32.Parse(sumZayma.Text);
+            double zaym = Convert.ToDouble(sumZayma.Text);
             if (zaym > 500000 || zaym < 0)
             {
                 MessageBox.Show("Сумма займа введена неверно");
                 return;
             }
 
-            int period = Int32.Parse(txPeriod.Text);
+            double period = Convert.ToDouble(txPeriod.Text);
             if (period > 365 || period < 1)
             {
                 MessageBox.Show("Период введ неверно");
@@ -44,10 +44,18 @@ namespace CalMicroCredit
 
             var data = txProc.Text.Split(' ');
 
-            for(int i = 0; i <= period; i++)
+            for(int i = 0; i < period; i++)
             {
-                sumProc += Convert.ToInt32(data[i]) * zaym;
+                sumProc += Convert.ToDouble(data[i])/100 * zaym;
             }
+
+            tbSumProc.Text = sumProc.ToString();
+
+            obchaySumVyp = zaym + sumProc;
+            tbSumVyp.Text = obchaySumVyp.ToString();
+
+            effStavka = sumProc / zaym / period * 100;
+            tbEfStav.Text = effStavka.ToString();
         }
     }
 }
